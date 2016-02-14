@@ -11,8 +11,8 @@ listInsertBefore(pos, beni);
 
 var pos = listGetFirst();
 while (pos) {
-    pos = listGetNext(pos);
-
     var data = listGetData(pos);
     console.log(data.id + ": " + data.name);
+	
+    pos = listGetNext(pos);
 }
