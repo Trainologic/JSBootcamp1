@@ -14,5 +14,5 @@
         return n1 == n2;
     });
 
-    console.log(res);
+    console.log(!!res);
 })();
