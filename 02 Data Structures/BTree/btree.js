@@ -13,6 +13,7 @@ function add(tree, data) {
 
     if (!tree.root) {
         tree.root = newNode;
+        tree.count = 1;
     }
     else {
         addNode(tree, tree.root, newNode)
@@ -31,6 +32,7 @@ function addNode(tree, node, newNode){
         }
         else {
             node[SIDE] = newNode;
+            ++tree.count;
         }
     }
 }
