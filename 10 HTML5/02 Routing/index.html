@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="MyApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -15,14 +15,23 @@
     </style>
 </head>
 <body>
-    <div ng-controller="HomeCtrl" data-url="/">
-        <a href="/about">About</a>
+    <div ng-controller="HomeCtrl" data-url="/" data-default>
+        <h1>Home</h1>
+
+        <a href="#" ng-click="gotoUrl('/about', $event)">About</a>
     </div>
 
     <div ng-controller="AboutCtrl" data-url="/about">
-        <a href="/">Home</a>
+        <h1>About</h1>
+
+        <a href="#" ng-click="gotoUrl('/', $event)">Home</a>
     </div>
 
     <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="router.js"></script>
+    <script src="HomeCtrl.js"></script>
+    <script src="AboutCtrl.js"></script>
 </body>
 </html>
