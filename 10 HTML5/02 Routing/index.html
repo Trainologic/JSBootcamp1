@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body > div {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="HomeCtrl" data-url="/">
+        <a href="/about">About</a>
+    </div>
+
+    <div ng-controller="AboutCtrl" data-url="/about">
+        <a href="/">Home</a>
+    </div>
+
+    <script src="jquery.js"></script>
+</body>
+</html>
